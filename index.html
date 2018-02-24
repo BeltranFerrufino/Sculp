@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sculp</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style media="screen">
+      body{
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      header{
+        position: absolute;
+        z-index: 4;
+      }
+      .contenedor{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+      }
+      .parte1{
+        width: 95vw;
+        height: 100vh;
+        /* margin: 0; */
+        /* margin-right: 123px; */
+        background-image: url(http://www.todopaisajes.com/1920x1080/atardeceres.jpg);
+        background-size: cover;
+        position: relative;
+      }
+      .parte2{
+        width: 5vw;
+        height: 100vh;
+        background-color: #f97606;
+        /* position: relative; */
+        margin: 0;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+
+      }
+      .menu {
+        width: 95vw;
+        display: flex;
+        text-align: center;
+        vertical-align: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .sculp{
+        width: 240px;
+        height: 34px;
+        overflow-x: hidden;
+        /* height: auto; */
+        margin: 0;
+      }
+      .sculp p{
+        color: white;
+        font-family: arial;
+        font-size: 30px;
+        /* background-color: red; */
+        margin: 0;
+        font-weight: 600;
+      }
+      .secciones{
+        margin: 0;
+        display: inline-flex;
+        font-style: none;
+        list-style: none;
+        /* background-color: black; */
+        color: white
+        padding:inherit;
+
+      }
+      li{
+        color: white;
+        margin: 10px 20px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: arial;
+      }
+      .estrella-div{
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        right: 100px;
+      }
+      .icono{
+        /* background-color: red; */
+      color: white;
+      font-size: 20px;
+      height: 20px;
+      width: 20px;
+      z-index: 3;
+      cursor: pointer;
+      }
+      .lupa-div{
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        right: 40px;
+      }
+.desing-div{
+  width: 332px;
+  position: relative;
+  bottom: -167px;
+  right: -198px;
+}
+.desing-div p{
+  width: 332px;
+  font-size: 50px;
+  font-weight: 900;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  /* margin-bottom: 30px; */
+  color: white;
+  position: absolute;
+}
+.desing-div span:active{
+  border: none;
+}
+.desing-div span{
+  transition: .75s;
+  background: #f88307;
+  /* width: 389px; */
+  border-radius: 10px;
+  /* height: 15px; */
+  color: white;
+  border-bottom: 4px solid red;
+  font-size: 10px;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 32px;
+  /* margin-top: 30px; */
+  bottom: -169px;
+  position: absolute;
+}
+.mas-div{
+  position: relative;
+    width: 5vw;
+    height: 100vh;
+  display: flex;
+}
+.mas{
+  color: white;
+  margin: auto;
+}
+.redes{
+  width: 200px;
+  margin: 0;
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.paginas{
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: 186px;
+}
+.numero{
+  font-size: 20px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  padding: none;
+  margin: 0px 10px;
+}
+.linea{
+  width: 136px;
+  height: 1px;
+  background: white;
+  margin: 0px 10px;
+}
+.diseñador{
+  position: absolute;
+  bottom: 67px;
+  left: 15px;
+  transform: rotate(-90deg);
+  z-index: 5;
+}
+.diseñador p {
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin: 0;
+  cursor: pointer;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?xz6sxn');
+  src:  url('fonts/icomoon.eot?xz6sxn#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xz6sxn') format('truetype'),
+    url('fonts/icomoon.woff?xz6sxn') format('woff'),
+    url('fonts/icomoon.svg?xz6sxn#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-lupa:before {
+  content: "\e901";
+}
+.icon-mas:before {
+  content: "\ea0a";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-estrella:before {
+  content: "\e900";
+}
+.icon-github:before {
+  content: "\e902";
+}
+
+</style>
+  </head>
+  <body>
+    <header>
+      <nav class="menu">
+        <div class="sculp">
+          <p >SCULP</p>
+        </div>
+        <div class="">
+          <ul class="secciones">
+            <li>About program</li>
+            <li>Courses</li>
+            <li>Projects</li>
+            <li>Products</li>
+          </ul>
+        </div>
+        <div class="estrella-div">
+          <span class="icon-estrella icono"></span>
+        </div>
+        <div class="lupa-div">
+          <span class="icon-lupa icono"></span>
+        </div>
+
+      </nav>
+    </header>
+    <div class="contenedor">
+      <div class="parte1">
+        <div class="desing-div">
+            <p>Character Design.</p>
+            <span>Request course</span>
+        </div>
+        <div class="diseñador">
+          <p>Beltran Ferrufino</p>
+        </div>
+        <div class="paginas">
+          <span class="numero">1</span>
+          <div class="linea"></div>
+          <span class="numero">2</span>
+          <span class="numero">3</span>
+          <span class="numero">4</span>
+        </div>
+        <div class="redes">
+          <span class=" icon-github icono"></span>
+          <span class=" icon-youtube icono"></span>
+          <span class=" icon-facebook icono"></span>
+          <span class=" icon-instagram icono"></span>
+        </div>
+      </div>
+    </div>
+      <div class="parte2">
+        <div class="mas-div">
+          <span class="icon-mas icono mas"></span>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
